@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Buttons added in script.js -->
+    <h1> Photos </h1>
+    <div id="album-navigation-div"></div>
+    <div id="img-btn-div"></div> 
+    <div id="page-navigation-div">
+        <button class="change-page-btn" id="prev-page-btn"><</button>
+        <p id="page-number">Page : 0 / 0</p>
+        <button class="change-page-btn" id="next-page-btn">></button>
+    </div>
+
+    <div id="img-overlay-div" style="display:none">
+
+        
+        <div id="items-overlay-div">
+            <button class="change-img-btn" id="prev-btn"><</button>
+
+            <img id="big-image" src="" alt="image of something">
+            <video id="big-video" src="" alt="video of something" style="display:none;"></video>
+
+            <button class="change-img-btn" id="next-btn">></button>
+        </div>
+        <button id="back-btn">RETURN</button>
+        
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

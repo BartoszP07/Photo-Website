@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+:root{
+    --img-size: 0.5rem;
+    --font-family: "Pixelify Sans";
+    --background-colour: rgb(0, 0, 0);
+    --accent-colour: rgb(87, 7, 7);
+}
+
+body{
+    background: linear-gradient(-45deg,
+                                var(--background-colour) 20%,
+                                var(--accent-colour) 50%,
+                                var(--background-colour) 80%);
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100vw; */
+    min-height: 100vh;
+    flex-direction: column;
+    position: relative;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: var(--font-family);
+}
+
+h1{
+    font-size: 3rem;
+    position: absolute;
+    top: 2rem;
+}
+
+#login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: solid;
+    border-color: white;
+    border-radius: 0.5rem;
+}
+
+.form-input{
+    font-size: 2rem;
+    color: black;
+}
+
+.form-input:focus{
+    outline: none;
+}
+
+button{
+    font-size: 1.5rem;
+    width: 7rem;
+    height: 2rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    text-underline-offset: 0.5rem;
+    transition: 0.2s;
+}
+
+button:hover{
+    text-decoration: underline;
+    transform: translateY(-0.2rem);
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+    
+    h1 {
+        font-size: 2rem;    /* Scale down from 3rem so it doesn't wrap awkwardly */
+        top: 1.5rem;        /* Pull it up slightly to save vertical space */
+    }
+
+    #login-form {
+        width: 85%;         /* Force the form to stay inside the screen boundaries */
+        max-width: 300px;   /* Stops it from stretching too wide on landscape phone mode */
+        padding: 1.5rem;    /* Slightly tighter padding */
+    }
+
+    .form-input {
+        font-size: 1.2rem;  /* Scales down the text and the input box size perfectly */
+        width: 100%;        /* Makes the inputs stretch beautifully to match the form width */
+        padding: 0.4rem;    /* Adds nice breathing room inside the input text area */
+    }
+
+    button {
+        font-size: 1.2rem;
+        width: 100%;        /* Full-width buttons are much easier to tap with a thumb! */
+        height: 3rem;       /* Increased height to make a comfortable mobile tap target */
+    }
+    
+    p {
+        font-size: 1rem;    /* Drop the description text down just a touch */
+    }
+}

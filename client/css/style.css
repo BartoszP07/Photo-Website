@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+:root{
+    --img-size: 0.5rem;
+    --font-family: "Pixelify Sans";
+    --background-colour: rgb(5, 30, 99);
+    --accent-colour: rgb(172, 161, 12);
+}
+
+body{
+    /* background: #224dc3; */
+    background: linear-gradient(45deg,
+                                var(--background-colour) 10%,
+                                var(--accent-colour) 50%,
+                                var(--background-colour) 90%);
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100vw; */
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: var(--font-family);
+}
+
+button{
+    background-color: rgb(100, 100, 100);
+    border: none;
+    outline: none;
+    width: max-content;
+    height: max-content;
+    transition: 0.2s;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.img-btn{
+    
+    min-width: 10rem;
+    min-height: 15rem;
+    max-width: 10rem;
+    max-height: 15rem;
+    background: transparent;
+}
+
+#img-btn-div{
+    width: 98vw;
+    height: max-content;
+
+    display: grid;
+    
+    grid-template-rows: 15rem;
+    grid-auto-rows: 15rem;
+    grid-template-columns: repeat(auto-fit, 10rem);
+
+    justify-content: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+
+}
+
+.change-img-btn{
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+#back-btn{
+    background-color: transparent;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.album-nav-btn{
+    background: transparent;
+    
+    text-underline-offset: 0 0.1rem;
+    font-size: 1.5rem;
+    transition: 0.2s;
+}
+
+.album-nav-btn:hover{
+    text-decoration: underline;
+    transform: translateY(-0.2rem);
+}
+
+.album-nav-btn.selected{
+    text-decoration: underline;
+    transform: translateY(-0.2rem);
+}
+
+img{
+    width: 10rem;
+    height: 15rem;
+    object-fit: cover;
+    box-shadow: 0 0 1.2rem rgb(80, 80, 80);
+    transition: 0.1s;
+    border-radius: 0.3rem;
+    border: solid;
+    border-color: var(--accent-colour);
+    border-width: 0.1rem;
+}
+
+img:hover{
+    box-shadow: 0 0 1.2rem 0.5rem var(--accent-colour);
+}
+
+video{
+    width: 10rem;
+    height: 15rem;
+    object-fit: cover;
+    box-shadow: 0 0 1.2rem rgb(80, 80, 80);
+    transition: 0.1s;
+    border-radius: 0.3rem;
+    border: solid;
+    border-color: var(--accent-colour);
+    border-width: 0.1rem;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+video:hover{
+    box-shadow: 0 0 1.2rem 0.5rem var(--accent-colour);
+}
+
+#img-overlay-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-direction: column;
+}
+
+#items-overlay-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#big-image{
+    width: 80vw;
+    height: 80vh;
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 1.2rem rgb(80, 80, 80));
+    box-shadow: none;
+    border: none;
+}
+
+
+#big-image:hover{
+    filter: drop-shadow(0px 0px 1.2rem rgb(80, 80, 80));
+    box-shadow: none;
+}
+
+#big-image.wide {
+    width: 80vw;
+    height: 80vh;
+}
+
+#big-video{
+    width: 80vw;
+    height: 80vh;
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 1.2rem rgb(80, 80, 80));
+    box-shadow: none;
+    border: none;
+}
+
+#big-video:hover{
+    filter: drop-shadow(0px 0px 1.2rem rgb(80, 80, 80));
+    box-shadow: none;
+}
+
+#big-video.wide{
+    width: 80vw;
+    height: 80vh;
+}
+
+#page-navigation-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.change-page-btn{
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+#page-number{
+    font-size: 1.5rem;
+}
+
+#album-navigation-div{
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    max-width: 98vw;
+    white-space: nowrap;
+    scrollbar-width: none;
+    margin-bottom: 1rem;
+}
+
+#album-navigation-div::-webkit-scrollbar{
+    display: none;
+}
